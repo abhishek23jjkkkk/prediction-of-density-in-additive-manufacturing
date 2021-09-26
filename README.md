@@ -51,12 +51,12 @@ In the present study, the optimal process parameters for Laser Powder Bed Fusion
 6.	References
 
 1.	Ivanna Baturynskaa, Oleksandr Semeniutaa, Kristian Martinsen. Optimization of process parameters for powder bed fusion additive manufacturing by combination of machine learning and finite element method: A conceptual framework. doi: 10.1016/j.procir.2017.12.204
-2.	Vladimir Brailovski, Victoria Kalinicheva, Morgan Letenneur, Konstantin Lukashevich, Vadim Sheremetyev and Sergey Prokoshkin. Control of Density and Grain Structure of a Laser Powder Bed-Fused Superelastic Ti-18Zr-14Nb Alloy: Simulation-Driven Process Mapping. Metals 2020, 10, 1697; doi:10.3390/met10121697.
+2.	Vladimir Brailovski, Victoria Kalinicheva, Morgan Letenneur, Konstantin Lukashevich, Vadim Sheremetyev and Sergey Prokoshkin. Control of Density and Grain Structure of a Laser Powder Bed-Fused Superelastic Ti-18Zr-14Nb Alloy: Simulation-Driven Process Mapping. Metals 2020, 10, 1697; 
 3.	Yi Zhang, Linmin Wu, Xingye Guo, Stephen Kane, Yifan Deng, Yeon-Gil Jung, Je-Hyun Lee, and Jing Zhang. Additive Manufacturing of Metallic Materials: A Review. Volume 27(1) January 2018—1
-4.	Morgan Letenneur, Alena Kreitcberg and Vladimir Brailovski. Optimization of Laser Powder Bed Fusion Processing Using a Combination of Melt Pool Modeling and Design of Experiment Approaches: Density Control. J. Manuf. Mater. Process. 2019, 3, 21; doi:10.3390/jmmp3010021
+4.	Morgan Letenneur, Alena Kreitcberg and Vladimir Brailovski. Optimization of Laser Powder Bed Fusion Processing Using a Combination of Melt Pool Modeling and Design of Experiment Approaches: Density Control. J. Manuf. Mater. Process. 2019, 3, 21; 
 5.	Ugur M Dilberoglua, Bahar Gharehpapagha, Ulas Yamana, Melik Dolena. The role of additive manufacturing in the era of Industry 4.0. doi: 10.1016/j.promfg.2017.07.148.
 6.	C. Wang, X.P. Tan, S.B. TorC.S. Machine learning in additive manufacturing: State-of-the-art and perspectives. 2214-8604/ © 2020 Elsevier.
-7.	Engin Pekel. Estimation of soil moisture using decision tree regression.https://doi.org/10.1007/s00704-019-03048-8
+7.	Engin Pekel. Estimation of soil moisture using decision tree regression.
 8.	A.B. Spierings, M. Schneider, R. Eggenberger, Comparison of density measure techniques for additive manufactured metallic parts, Rapid Prototyp. J. 17 (2011) 380–386.
 9.	Acharya R, Sharon JA, Staroselsky A. Prediction of microstructure in laser powder bed fusion process. Acta Mater 2017;124:360–71.
 10.	Ahmed, A.; Wahab, M.S.; Raus, A.A.; Kamarudin, K.; Bakhsh, Q.; Ali, D. Effects of Selective Laser Melting Parameters on Relative Density of AlSi10Mg. Int. J. Eng. Technol. 2016, 8, 2552–2557.
