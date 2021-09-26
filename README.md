@@ -1,1 +1,77 @@
-# prediction-of-density-in-additive-manufacturing
+Analysis of Density of Laser Powder Bed Fusion Fabricated Part Using Machine Learning Approach
+
+Abstract Additive manufacturing (AM) enabled manufacturing industries to fabricate metallic components with complex shapes. However, the properties of additively manufactured parts need further improvements to compete with the performance of traditionally manufactured parts. Machine Learning (ML) models provide an alternative to study the correlation between the process parameters–properties of the fabricated parts. In the present work, the ML approach has been applied to understand the effect of AM process parameters on the density of additively built parts. The decision tree model was developed based on that input parameters such as Laser Power, Scan Speed, Hatching Space, Energy Density, and Build rate of Laser Powder Bed Fusion manufactured part. The model was trained and tested with experimental data obtained from the relevant literature. The process parameters were optimized to achieve the desired density of a part. A good agreement was indicated between the predicted and experimental data. The study revealed applicability and potential of the model to determine and predict the density of the additively manufactured parts. 
+Keywords Additive manufacturing, Laser Powder Bed Fusion, Decision Tree, Machine Learning, Density.
+1. Introduction 
+Additive Manufacturing (AM) is a process of fabricating materials using layer by layer approach from a 3D model data [1]. In the earlier stages, additive manufacturing was limited to only making prototypes but now this technology is gaining interest in manufacturing because of its ability to produce complex parts with customized properties. It is a low-cost process because it reduces the wastage of material. AM is used in many fields such as aerospace, medical, automotive, fashion, and food industries. There are many additive manufacturing processes that are used to build 3D parts. Each additive manufacturing process uses different process parameters to fabricate the parts. We can improve the quality of additively fabricated parts by optimizing the process parameters. Each process parameter plays a crucial role in the quality of the fabricated part. The practical experiments are expensive for determining the best parameters for a process. So, the main aim of this paper to optimize the process parameter of LPBF by using machine learning to get desired density of the as-built part.
+In this paper, we consider Laser Powder Bed Fusion (LPBF), which is an additive manufacturing process that uses a high-power laser that follows a certain path, determined by a selected laser scanning strategy and a numerical model of the part, to fabricate the part by fusing powder particles layer-by-layer [2]. As compared to other AM techniques, the Laser Powder Bed Fusion process likely to be the most usual for metallic materials, due to their ability of fabricating parts with improved density, properties, and surface finish [3]. The major problem in LPBF is defect formation in fabricated parts. The quality of manufactured parts by LPBF depends on many process parameters such as power, scan speed, hatching space, etc. It is a complex process therefore it requires modelling and simulation tools for optimizing the process parameters and achieving the desired quality. The detection of process parameters that influences product quality is a challenging task. The finite element method can be used for modelling and simulation but it is computationally expensive. The other method that can be used is the experimental approach. The practical experiment method is costly and time-consuming. Machine learning is an attractive approach that can be used to optimize process parameters and to predict quality of the product. We have used a decision tree machine learning algorithm for the prediction of the density of LPBF parts. It required experimental data to make a model, optimize or predict the quality of the product.
+2. Methodology 
+In this study, the experimental data is collected from a research paper [4]. First, they have built the calibration coupons IN625, Ti64, and Fe powders and with Laser Powder Bed Fusion Process. Then the densities were measured using conventional material characterization techniques. The quality of a manufactured part depends on process parameters. The main objective of our project is to predict density and optimize the process parameter using machine learning. We have taken process parameters Laser Power, Scan Speed, Hatching Space as an input feature and density as an output feature. We have used the Decision Tree algorithm to make a model. First, we try to find the relationship between the process parameters with density. Then we have trained and tested our model. The mean absolute error, mean square error, and root mean square is calculated to find the accuracy of the model. Then we did a comparison between the actual density and the predicted density. We tried to find the best process parameters so that high density can be achieved. This will help to reduce the time and cost that is required to optimize the process parameters.
+
+3. Machine Learning
+Machine Learning is a subset of artificial intelligence (AI) techniques that allow a machine to learn from past data and make decisions or predictions. The fourth industrial revolution is the modern movement on intelligent automation technology. Additive manufacturing is one of the important components of Industry 4.0 [5]. Machine learning is gaining popularity in smart manufacturing. The additive manufacturing processes can be optimized using machine learning. 
+Machine learning is mainly divided into two types: Supervised learning and Unsupervised learning. Supervised learning enables a machine to learn from a set of labelled data in the training set and then it is tested using the testing set [6]. Then the accuracy of the model is calculated. Whereas an unsupervised learning model is used to find hidden patterns from unlabelled data. In this work, we have used a decision tree regression algorithm which is a supervised learning model.
+
+A decision tree is one of the most versatile supervised learning algorithms in machine learning capabilities of both classification and regression problems. It is easy to understand and implement which makes it more popular to use. The decision tree algorithm divides the whole dataset into a tree-like structure based on some rules and conditions. Then it done prediction based on that conditions. It consists of an random
+number of nodes and branches at each node. This algorithm helps to find the optimal decision tree by minimizing the fitness function [7]. A regression model is fit to the output feature using each of the input features. The complex decision tree models can be easily understood just by visualising the dataset.
+
+4. Results and discussion
+4.1 Process Parameters and their relation with density
+The process parameters that we have taken as input features for the machine learning algorithm are Laser Power, Scan Speed, Hatching Space, Energy density, and built rate. Each parameter has a significant relationship with the density of the manufactured part. We have shown the correlation of each parameter with density in a figure. To get the desired density of a product, we have to optimize these parameters.
+
+The laser power is taken between 160 to 340 Watt for the experiment. It has been observed that the density of the part is increased with increasing power. Similarly, the scanning speed is taken between the range of 0.56 to 2.8. The energy density is a function of power, scan speed, and layer thickness. The energy density increase with increasing power and decrease with an increase in Scan Speed, Hatching space, and layer thickness. On the other hand, the build rate depends on power, scan speed, and layer thickness. The relationship between processing parameters can be seen in the graphs 
+
+It has been observed that when scan speed goes greater than 2 m/s the density of manufactured part decreases. When the hatching space increases from 0.3 mm the density of part decreases. When the power increases from 225 to 350 Watt the density of the fabricated part also increases. Similarly, the density of manufactured parts increases when energy density lies between the range of 60-120 J/mm3. The density of part decreases with an increase of build rate from 30 cm3/h. The optimum values of the powder bed fusion are mentioned in the Table 2.
+Table 2. Optimum values of the process parameters
+Sl. No.	Process Parameters	Optimum Values
+1.		Power	225-350 Watt
+2.		Scan Speed	0.5-2 m/s
+3.		Hatching Space	0.5-0.3 mm
+4.		Energy density	50-120 J/mm3
+5.		Build Rate	10-20 cm3/h
+
+4.3 Model Training and Testing Result
+We have used a decision tree machine learning algorithm for the prediction of the density of the LPBF manufactured part. The input features for this algorithm are Power, Scan Speed, Hatching Space, Energy density, and Build Rate. First, we trained our model with 50% training and 50% testing dataset. Then the accuracy of the model is observed. Similarly, we observed our model accuracy with different training and testing datasets. The parameters that we have used to calculate model accuracy are R2, adjusted R2, mean absolute error, Mean square error, and Root mean square error. The detailed results of the training and testing datasets are given in the table 3. It has been observed that with 75% training and 25% testing datasets the decision model is giving high accuracy. The graph between actual and predicted density is linear. 
+
+
+
+
+Table 3. Statistical analysis
+Sl. No.	Dataset	Details of Testing
+		R2	Adj.R2	MAE	MSE	RMSE
+1.		50-50% 	0.75	0.70	0.93	3	1.73
+2.		60-40% 	0.80	0.74	0.61	1.34	1.15
+3.		70-30%	0.73	0.62	0.73	2.1	1.45
+4.		75-25% 	0.89	0.83	0.45	0.61	0.78
+5.		80-20% 	0.88	0.77	0.53	0.73	0.77
+
+            Fig. 7. Actual vs Predicted density
+5. Conclusion
+In the present study, the optimal process parameters for Laser Powder Bed Fusion were identified using ML approach by reducing time and cost significantly as compared to other approaches such as modelling and simulation or conducting a large number of experiments. It also enables prediction of the quality of manufactured parts. A decision tree algorithm was used to build a model with a reasonable accuracy of approximately 90%. The relationship between process parameters like Laser Power, Scan speed, Hatching Space, Energy density, and Build rate were identified and optimal process parameters for LPBF were obtained for achieving higher density of the developed parts.
+6.	References
+
+1.	Ivanna Baturynskaa, Oleksandr Semeniutaa, Kristian Martinsen. Optimization of process parameters for powder bed fusion additive manufacturing by combination of machine learning and finite element method: A conceptual framework. doi: 10.1016/j.procir.2017.12.204
+2.	Vladimir Brailovski, Victoria Kalinicheva, Morgan Letenneur, Konstantin Lukashevich, Vadim Sheremetyev and Sergey Prokoshkin. Control of Density and Grain Structure of a Laser Powder Bed-Fused Superelastic Ti-18Zr-14Nb Alloy: Simulation-Driven Process Mapping. Metals 2020, 10, 1697; doi:10.3390/met10121697.
+3.	Yi Zhang, Linmin Wu, Xingye Guo, Stephen Kane, Yifan Deng, Yeon-Gil Jung, Je-Hyun Lee, and Jing Zhang. Additive Manufacturing of Metallic Materials: A Review. Volume 27(1) January 2018—1
+4.	Morgan Letenneur, Alena Kreitcberg and Vladimir Brailovski. Optimization of Laser Powder Bed Fusion Processing Using a Combination of Melt Pool Modeling and Design of Experiment Approaches: Density Control. J. Manuf. Mater. Process. 2019, 3, 21; doi:10.3390/jmmp3010021
+5.	Ugur M Dilberoglua, Bahar Gharehpapagha, Ulas Yamana, Melik Dolena. The role of additive manufacturing in the era of Industry 4.0. doi: 10.1016/j.promfg.2017.07.148.
+6.	C. Wang, X.P. Tan, S.B. TorC.S. Machine learning in additive manufacturing: State-of-the-art and perspectives. 2214-8604/ © 2020 Elsevier.
+7.	Engin Pekel. Estimation of soil moisture using decision tree regression.https://doi.org/10.1007/s00704-019-03048-8
+8.	A.B. Spierings, M. Schneider, R. Eggenberger, Comparison of density measure techniques for additive manufactured metallic parts, Rapid Prototyp. J. 17 (2011) 380–386.
+9.	Acharya R, Sharon JA, Staroselsky A. Prediction of microstructure in laser powder bed fusion process. Acta Mater 2017;124:360–71.
+10.	Ahmed, A.; Wahab, M.S.; Raus, A.A.; Kamarudin, K.; Bakhsh, Q.; Ali, D. Effects of Selective Laser Melting Parameters on Relative Density of AlSi10Mg. Int. J. Eng. Technol. 2016, 8, 2552–2557.
+11.	C. Kamath, Y.J. Fan, Regression with small data sets: a case study using code surrogates in additive manufacturing, Knowl. Inf. Syst. 57 (2) (2018) 475–493.
+12.	Gong, H., Rafi, K., Gu, H., Starr, T. and Stucker, B., Analysis of Defect Generation in Ti–6al–4v Parts Made Using Powder Bed Fusion Additive Manufacturing Processes. Additive Manufacturing 1; 2014.
+13.	Gorsse S, Hutchinson C, Gouné M, Banerjee R. Additive manufacturing of metals: a brief review of the characteristic microstructures and properties of steels, Ti–6Al–4V and high-entropy alloys. Sci Technol Adv Mater 2017;18(1):584–610.
+14.	G. Tapia, A. Elwany, H. Sang, Prediction of porosity in metal-based additive manufacturing using spatial Gaussian process models, Addit. Manuf. 12 (2016) 282–290.
+15.	G. Tapia, S. Khairallah, M. Matthews, W.E. King, A. Elwany, Gaussian process-based surrogate modeling framework for process planning in laser powder-bed fusion additive manufacturing of 316L stainless steel, Int. J. Adv. Manuf. Technol. 94 (9-12) (2018) 3591–3603.
+16.	Gu H, Gong H, Pal D, Rafi K, Starr T, and Stucker B (2013) Influences of energy density on porosity and microstructure of selective laser melted 17-4PH stainless steel. Proceedings of Solid Freeform Fabrication Symposium, 474–489.
+17.	Hassanin, H.; Alkendi, Y.; Elsayed, M.; Essa, K.; Zweiri, Y. Controlling the Properties of Additively Manufactured Cellular Structures Using Machine Learning Approaches. Adv. Eng. Mater. 2020, 22, 1901338.
+18.	lgado J, Ciurana J, and Rodríguez CA (2012) Influence of process parameters on part quality and mechanical properties for DMLS and SLM with iron-based materials. The International Journal of Advanced Manufacturing Technology 60:601–610.doi:10.1007/s00170-011-3643-5.
+19.	Kempen K, Yasa E, Thijs L, Kruth JP, Humbeeck JV (2011) Microstructure and mechanical properties of selective laser melted 18Ni-300 steel. Physics Procedia, 12:255–263. doi:10.1016/j.phpro.2011.03.033.
+20.	R.J. Wang, J. Li, F. Wang, X. Li, Q. Wu, ANN model for the prediction of density in selective laser sintering, Int. J. Manuf. Res. 4 (3) (2009) 362–373.
+21.	Silbernagel, C.; Aremu, A.; Ashcroft, I. Using machine learning to aid in the parameter optimisation process for metal-based additive manufacturing. Rapid Prototype. J. 2019, 26, 625–637.
+22.	Sun J, Yang Y, and Wang D (2013) Parametric optimization of selective laser melting for forming Ti6Al4V samples by Taguchi method. Optics & Laser Technology 49:118–124. doi:10.1016/j.optlastec.2012.12.002.
+23.	Weichert, D.; Link, P.; Stoll, A.; Rüping, S.; Ihlenfeldt, S.; Wrobel, S. A review of machine learning for the optimization of production processes. Int. J. Adv. Manuf. Technol. 2019.
+24.	W. Gao, Y. Zhang, D. Ramanujan, K. Ramani, Y. Chen, C. Wang, Y. Shen, S. Zhang, P. Zavattieri, the status, challenges, and future of additive manufacturing in engineering, Comput.-Aided Des. 69 (2016) 65–89
+
